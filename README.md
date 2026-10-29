@@ -18,6 +18,18 @@ The goal was to build a fully functional, audit-ready clinical data pipeline. He
 3. **Auditing the Data (Data Validation):** I wrote a custom Python validation engine (`discrepancy_validation.py`) to act as a digital auditor. It scanned the messy data and flagged the 5 deliberate errors, generating a formal Query Log.
 4. **Fixing the Data (Database Lock):** Acting as a Data Manager, I went back into REDCap, resolved the queries with proper 21 CFR Part 11 audit trails, and achieved a "Database Lock" (zero errors).
 
+#### 📸 EDC Architecture & Audit Trail 
+*(Screenshots from the REDCap environment built for this trial)*
+
+**1. eCRF Builder View (CDASH Variable Mapping)**
+![REDCap eCRF Design](assets/ecrf_design.png)
+
+**2. Longitudinal Record Status Dashboard**
+![REDCap Dashboard](assets/redcap_dashboard.png)
+
+**3. Data Query & Audit Trail Resolution**
+![REDCap Audit Trail](assets/redcap_audit_trail.png)
+
 ### Phase 2: The SDTM Transformation Engine
 1. **Formatting for Submission (SDTM):** Regulatory agencies don't accept raw REDCap data. I wrote a Python pipeline to transform the clean data into strict CDISC SDTM formats (`DM`, `AE`, `EX`, `RS`).
 
