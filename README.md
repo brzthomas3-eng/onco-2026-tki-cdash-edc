@@ -18,21 +18,6 @@ The goal was to build a fully functional, audit-ready clinical data pipeline. He
 3. **Auditing the Data (Data Validation):** I wrote a custom Python validation engine (`discrepancy_validation.py`) to act as a digital auditor. It scanned the messy data and flagged the 5 deliberate errors, generating a formal Query Log.
 4. **Fixing the Data (Database Lock):** Acting as a Data Manager, I went back into REDCap, resolved the queries with proper 21 CFR Part 11 audit trails, and achieved a "Database Lock" (zero errors).
 
-#### 📸 EDC Architecture & Form Design 
-*(Screenshots from the REDCap environment built for this trial)*
-
-**1. eCRF Builder View (Adverse Event Instrument)**
-![AE Instrument](assets/AE%20Instrument-%20REDCap.png)
-
-**2. Informed Consent Form Design**
-![Informed Consent Form](assets/Informed%20Consent%20Form.png)
-
-**3. Complete List of Data Collection Instruments**
-![List of Instruments](assets/List%20of%20Instruments.png)
-
-**4. Longitudinal Record Status Dashboard**
-![Record Status Dashboard](assets/Record%20Status%20Dashboard.png)
-
 
 ### Phase 2: The SDTM Transformation Engine
 1. **Formatting for Submission (SDTM):** Regulatory agencies don't accept raw REDCap data. I wrote a Python pipeline to transform the clean data into strict CDISC SDTM formats (`DM`, `AE`, `EX`, `RS`).
@@ -62,6 +47,21 @@ This chart tracks the side effects (Adverse Events) patients experienced, catego
 - **Conclusion:** The most common side effects were Nausea, Acneiform Rash, and Diarrhea, mostly kept at a mild/manageable Grade 1 or 2. There were very few severe events (like Grade 3/4 Febrile Neutropenia), indicating that the drug has an acceptable safety profile for this stage of research.
 
 ---
+
+### 📸 EDC Architecture & Form Design 
+*(Screenshots from the REDCap environment built for this trial)*
+
+**1. eCRF Builder View (Adverse Event Instrument)**
+![AE Instrument](assets/AE%20Instrument-%20REDCap.png)
+
+**2. Informed Consent Form Design**
+![Informed Consent Form](assets/Informed%20Consent%20Form.png)
+
+**3. Complete List of Data Collection Instruments**
+![List of Instruments](assets/List%20of%20Instruments.png)
+
+**4. Longitudinal Record Status Dashboard**
+![Record Status Dashboard](assets/Record%20Status%20Dashboard.png)
 
 ## 📂 Repository Structure
 Here is how the project files and directories are organized based on my workspace:
